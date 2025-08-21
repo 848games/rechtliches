@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* Optional: Header einbinden */
+header {
+  background: #1b1b1b;
+  color: #eee;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+header .nav-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+header .nav-tabs a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+header .nav-tabs a:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+header .nav-tabs a.active {
+  background-color: #0f4c81;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  max-width: 1024px;
+  margin: 2rem auto;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.toc {
+  position: sticky;
+  top: 2rem;
+  flex: 0 0 240px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  font-size: 0.9rem;
+}
+
+.toc h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #4da3d8;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc ul li {
+  margin-bottom: 0.6rem;
+}
+
+.toc ul li a {
+  text-decoration: none;
+  color: #6bbafc;
+  transition: color 0.2s ease;
+}
+
+.toc ul li a:hover,
+.toc ul li a:focus {
+  text-decoration: underline;
+  outline: none;
+  color: #90caf9;
+}
+
+.content {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #4da3d8;
+  padding-bottom: 0.3rem;
+  color: #4da3d8;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #4da3d8;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .toc {
+    position: relative;
+    top: auto;
+    flex: none;
+    margin-bottom: 2rem;
+  }
+}
